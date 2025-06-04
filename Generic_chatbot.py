@@ -37,3 +37,4 @@ while True:
     chat_history.append(AIMessage(content=response.content))
 
     print("AI:", response.content)
+
