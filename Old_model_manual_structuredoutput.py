@@ -12,8 +12,16 @@ parser = RunnableLambda(custome_parser)
 structured_output= parser.invoke(gpt_output)
 print(structured_output)
 
-""" When using older models like GPT-2, JSON output is not natively supported, 
+""" 
+When using older models like GPT-2, JSON output is not natively supported, 
 so the response defaults to plain text, this requires manual parsing either by converting 
 the text to a type dict or using tools like stroutputparse. In contrast, newer models like 
 gpt 3.5,4 support structured outputs in formats like JSON which makes parsing more seamless by using Pydantic schemas.
+
+StrOutputParser will convert raw text to String which works fair with langchain compatiblity
+this is just to generate summaries,explainations,answers.
+you dont care about parsing the output.
+
+Use StructuredOutputParser only when you are sure your LLM will output exactly the
+structured schema like JSON.
 """
