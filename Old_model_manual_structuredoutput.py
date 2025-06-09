@@ -24,4 +24,11 @@ you dont care about parsing the output.
 
 Use StructuredOutputParser only when you are sure your LLM will output exactly the
 structured schema like JSON.
+
+StrOutputParser will convert raw text to String which works fair with langchain compatiblity
+this is just to generate summaries,explainations,answers.
+you dont care about parsing the output.
+
+Use StructuredOutputParser only when you are sure your LLM will output exactly the
+structured schema like JSON.
 """
